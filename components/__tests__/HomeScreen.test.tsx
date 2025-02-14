@@ -8,10 +8,6 @@ jest.mock("expo-font", () => ({
     useFonts: jest.fn(() => [true]),
 }));
 
-// jest.mock("@/hooks/useColorScheme", () => ({
-//     useColorScheme: jest.fn(),
-// }));
-
 jest.mock("react-native-safe-area-context", () => {
     const React = require("react");
     return {
