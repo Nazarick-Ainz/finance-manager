@@ -1,7 +1,7 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
-// import * as SplashScreen from 'expo-splash-screen';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
@@ -19,13 +19,13 @@ export default function RootLayout() {
 
   useEffect(() => {
     if (loaded) {
-      // SplashScreen.hideAsync();
+      SplashScreen.hideAsync();
     }
   }, [loaded]);
 
-  // if (!loaded) {
-  //   return null;
-  // }
+  if (!loaded) {
+    return null;
+  }
 
   return (
     <ThemeProvider
